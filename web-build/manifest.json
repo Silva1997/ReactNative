@@ -5,5 +5,13 @@
   "name": "StickerSmash",
   "short_name": "StickerSmash",
   "start_url": "/?utm_source=web_app_manifest",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "http://play.google.com/store/apps/details?id=com.eugenio",
+      "id": "com.eugenio"
+    }
+  ],
+  "prefer_related_applications": true
 }
