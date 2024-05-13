@@ -71,7 +71,7 @@ export default function App() {
                         )
                     }}
                 />
-                <Drawer.Screen name="Lista" component={"Ola"}
+                <Drawer.Screen name="Lista" component={Cadrasto}
 
                     options={{
                         drawerIcon: ({ size }) => (
