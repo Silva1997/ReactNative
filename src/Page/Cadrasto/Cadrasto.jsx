@@ -6,6 +6,7 @@ import { AntDesign } from '@expo/vector-icons';
 import imagem from '../../../assets/image.png'
 import { supabase } from '../../../BancoServer/Cliente';
 import Toast from 'react-native-toast-message';
+import Camera from '../../Componet/Image/Camera';
 
 const App = () => {
     const [nome, setNome] = useState('');
@@ -56,6 +57,7 @@ const App = () => {
                 <VStack space={4} alignItems="center">
                     <View safeArea>
                         <Text style={{ fontWeight: '500', textAlign: 'center', color: "#fff" }}>Registar dados</Text>
+                    <Camera/>
                     </View>
                     <FormControl isRequired isInvalid={false} w="75%" maxW="300px">
                         <FormControl.Label color={'#fff'}>Nome</FormControl.Label>
