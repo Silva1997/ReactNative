@@ -14,7 +14,9 @@ const App = () => {
     const [bi, setBi] = useState('');
     // const [imagem, setImagem] = useState(null);
 
-
+const alert = notifee.displayNotification({
+    
+})
 
 
     
