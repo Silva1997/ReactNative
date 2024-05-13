@@ -38,7 +38,7 @@ export default function App() {
 
                 initialRouteName="Home"
                 screenOptions={{
-
+title:'',
                     headerStyle: {
                         backgroundColor: '#5e5e5e',
                         borderColor: '#b286ebdd',
@@ -59,7 +59,8 @@ export default function App() {
                     options={{
                         drawerIcon: ({ size }) => (
                             <AntDesign name='home' size={size} color={'white'} />
-                        )
+                        ),
+                        drawerLabel:'Inicio'
                     }}
 
                 />
@@ -69,6 +70,8 @@ export default function App() {
                         drawerIcon: ({ size }) => (
                             <AntDesign name='user' size={size} color={'white'} />
                         )
+                        ,
+                        drawerLabel:'Usuario'
                     }}
                 />
                 <Drawer.Screen name="Lista" component={Cadrasto}
@@ -77,6 +80,8 @@ export default function App() {
                         drawerIcon: ({ size }) => (
                             <Feather name="list" size={size} color="white" />
                         )
+                        ,
+                        drawerLabel:'Consultar'
                     }}
                      />
 
