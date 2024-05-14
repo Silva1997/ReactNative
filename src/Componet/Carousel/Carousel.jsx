@@ -1,190 +1,3 @@
-// // import React, { useRef, useState } from "react";
-// // import { View, FlatList, StyleSheet, Animated, useWindowDimensions, Image } from "react-native";
-// // import { Text, Button, Avatar } from "native-base";
-// // import data from "./Dados";
-// // import images from '../../../assets/images/background-image.png'
-
-// // const Carousel = () => {
-// //     const flatListRef = useRef(new Animated.Value(0)).current;
-
-// //     const screenWidth = useWindowDimensions().width;
-// //     const renderItem = ({ item, index }) => {
-// //         return (
-// //             <View style={[styles.container, { width: screenWidth }]}>
-// //                 <Image
-// //                     source={{ uri: images }}
-// //                     style={styles.image}
-// //                     alt="ppp"
-// //                 />
-// //                 <Text style={styles.header}>{item.title}</Text>
-// //             </View>
-// //         );
-// //     };
-
-// //     const scrollToIndex = (index) => {
-// //         flatListRef.current.scrollToIndex({ animated: true, index });
-// //     };
-
-// //     return (
-// //         <View style={{ flex: 1 }}>
-// //             <FlatList
-// //                 ref={flatListRef}
-// //                 data={data}
-// //                 horizontal
-// //                 pagingEnabled
-// //                 showsHorizontalScrollIndicator={false}
-// //                 keyExtractor={(item) => item.id}
-// //                 renderItem={renderItem}
-// //                 decelerationRate="fast"
-// //                 bounces={false}
-// //                 onScroll={Animated.event([{
-// //                     nativeEvent: {
-// //                         contentOffset: {
-// //                             x: flatListRef
-// //                         }
-// //                     }
-// //                 }], {
-// //                     useNativeDriver: false
-// //                 })}
-// //             />
-// //             <View style={styles.buttonsContainer}>
-// //                 {data.map((_, index) => (
-// //                     <Button
-// //                         key={index}
-// //                         onPress={() => scrollToIndex(index)}
-// //                         size="sm"
-// //                         colorScheme="secondary"
-// //                         variant="ghost"
-// //                         mx={1}
-// //                     >
-// //                         {index + 1}
-// //                     </Button>
-// //                 ))}
-// //             </View>
-// //         </View>
-// //     );
-// // };
-
-// // const App = () => {
-// //     return (
-// //         <View style={{ flex: 1 }}>
-// //             <Carousel />
-// //         </View>
-// //     );
-// // };
-
-// // const styles = StyleSheet.create({
-// //     container: {
-// //         flex: 1,
-// //         justifyContent: "center",
-// //         alignItems: "center",
-// //     },
-// //     buttonsContainer: {
-// //         flexDirection: "row",
-// //         justifyContent: "center",
-// //         marginTop: 10,
-// //     },
-// //     image: {
-// //         width:  0.1, // 10% da largura da tela
-// //         height: 300,
-// //         resizeMode: "cover",
-// //     },
-// //     header: {
-// //         color: "#222",
-// //         fontSize: 18,
-// //         fontWeight: "bold",
-// //         marginVertical: 10,
-// //     },
-// // });
-
-// // export default App;
-
-
-
-
-
-
-
-
-// import React, { useRef } from 'react';
-// import { View, FlatList, StyleSheet, useWindowDimensions, Animated } from 'react-native';
-
-
-// const data = [
-//   { id: '1', color: 'red' },
-//   { id: '2', color: 'blue' },
-//   { id: '3', color: 'green' },
-//   { id: '4', color: 'yellow' },
-// ];
-
-// const Carousel = () => {
-
-//   const  screenWidth = useWindowDimensions();
-
-//   const scrollX = useRef(new Animated.Value(0)).current;
-
-//   return (
-//     <View style={styles.container}>
-//       <FlatList
-//         data={data}
-//         horizontal
-//         pagingEnabled
-//         showsHorizontalScrollIndicator={false}
-//         keyExtractor={(item) => item.id}
-//         renderItem={({ item, index }) => {
-//           const inputRange = [(index - 1) * screenWidth, index * screenWidth, (index + 1) * screenWidth];
-//           const scale = scrollX.interpolate({
-//             inputRange,
-//             outputRange: [0.8, 1, 0.8],
-//           });
-//           const opacity = scrollX.interpolate({
-//             inputRange,
-//             outputRange: [0.6, 1, 0.6],
-//           });
-
-//           return (
-//             <Animated.View style={[styles.item, { width: screenWidth, transform: [{ scale }], opacity }]}>
-//               <View style={[styles.box, { backgroundColor: item.color }]} />
-//             </Animated.View>
-//           );
-//         }}
-//         onScroll={Animated.event([{ nativeEvent: { contentOffset: { x: scrollX } } }], { useNativeDriver: true })}
-//         scrollEventThrottle={16}
-//       />
-//     </View>
-//   );
-// };
-
-// const App = () => {
-//   return (
-//     <View style={{ flex: 1 }}>
-//       <Carousel />
-//     </View>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   },
-//   item: {
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   },
-//   box: {
-//     width: 300,
-//     height: 300,
-//     borderRadius: 10,
-//   },
-// });
-
-// export default App;
-
-
-
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -198,6 +11,7 @@ import {
   Dimensions,
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import Butao from './Button';
 
 const { width, height } = Dimensions.get('window');
 
@@ -208,19 +22,19 @@ const slides = [
     id: '1',
     image: require('C:/Users/Eugenio Silva/3D Objects/App3/StickerSmash/assets/images/imagens.png'),
     title: 'Encontre seus itens perdidos com facilidade',
-    subtitle: 'P1',
+    subtitle: 'Alcance seus objetivos de encontrar itens',
   },
   {
     id: '2',
     image: require('C:/Users/Eugenio Silva/3D Objects/App3/StickerSmash/assets/images/image1.png'),
     title: 'Alcance seus objetivos de encontrar itens',
-    subtitle: 'P2',
+    subtitle: 'Alcance seus objetivos de encontrar itens',
   },
   {
     id: '3',
     image: require('C:/Users/Eugenio Silva/3D Objects/App3/StickerSmash/assets/images/image3.png'),
     title: 'Valorize suas posses encontrando-as facilmente',
-    subtitle: `P3`
+    subtitle: `Alcance seus objetivos de encontrar itens`
   },
 ];
 
@@ -229,7 +43,7 @@ const Slide = ({ item }) => {
     <View style={{ flex: 2, alignContent:'center',flexDirection:'column'}} >
       <Image
         source={item?.image}
-        style={{ marginTop: 20, height: '280px', width,resizeMode: 'contain' }}
+        style={{ marginTop: 20, height: '270px', width,resizeMode: 'contain' }}
       />
       {/* <View style={{flexWrap:'wrap', margin:2}} > */}
         <Text style={[styles.title,{textAlign: 'justify',margin:'auto '}]}>{item?.title}</Text>
@@ -295,14 +109,14 @@ const OnboardingScreen = ({ navigation }) => {
         </View>
 
         {/* Render buttons */}
-        {/* <View style={{marginBottom: 20}}>
+        <View style={{marginBottom: 10}}>
           {currentSlideIndex == slides.length - 1 ? (
             <View style={{height: 50}}>
               <TouchableOpacity
                 style={styles.btn}
-                onPress={() =>  navigation.navigate('Usuario')}>
+                onPress={() =>  console.log('Hello')}>
                 <Text style={{fontWeight: 'bold', fontSize: 15}}>
-                  GET STARTED
+                  Vamos começar
                 </Text>
               </TouchableOpacity>
             </View>
@@ -325,7 +139,7 @@ const OnboardingScreen = ({ navigation }) => {
                     fontSize: 15,
                     color: COLORS.white,
                   }}>
-                  SKIP
+                  Saltar
                 </Text>
               </TouchableOpacity>
               <View style={{width: 15}} />
@@ -338,12 +152,12 @@ const OnboardingScreen = ({ navigation }) => {
                     fontWeight: 'bold',
                     fontSize: 15,
                   }}>
-                  NEXT
+                  Proximo
                 </Text>
               </TouchableOpacity>
             </View>
           )}
-        </View> */}
+        </View>
       </View>
     );
   };

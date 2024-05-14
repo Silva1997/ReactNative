@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.js": "/static/js/main.f57c0094.js",
+    "main.js": "/static/js/main.f0ea98f9.js",
     "static/js/368.f5f2a795.chunk.js": "/static/js/368.f5f2a795.chunk.js",
-    "static/js/448.7e31816e.js": "/static/js/448.7e31816e.js",
+    "static/js/219.ded4b4d8.js": "/static/js/219.ded4b4d8.js",
     "static/media/image1.png": "/static/media/image1.588eee26826571a31f39.png",
     "static/media/image3.png": "/static/media/image3.63d69b3d560cbed81145.png",
+    "static/media/Ionicons.ttf": "/static/media/Ionicons.3517aeaa34b2f8cd8eef.ttf",
     "static/media/imagens.png": "/static/media/imagens.4742e2199b811daf9467.png",
     "static/media/AntDesign.ttf": "/static/media/AntDesign.163adab9dbd7cb1ed12a.ttf",
     "static/media/Feather.ttf": "/static/media/Feather.0f5d9cede2e831f3fc80.ttf",
@@ -12,16 +13,17 @@
     "static/media/EvilIcons.ttf": "/static/media/EvilIcons.699664b33ac2837d5bee.ttf",
     "index.html": "/index.html",
     "static/media/image.png": "/static/media/image.21b289505f1aebb3dfe9.png",
+    "static/media/friends.png": "/static/media/friends.2a16b2665bcd88a56d6e.png",
     "favicon-32.png": "/favicon-32.png",
     "favicon-16.png": "/favicon-16.png",
     "manifest.json": "/manifest.json",
     "serve.json": "/serve.json",
-    "main.f57c0094.js.map": "/static/js/main.f57c0094.js.map",
+    "main.f0ea98f9.js.map": "/static/js/main.f0ea98f9.js.map",
     "368.f5f2a795.chunk.js.map": "/static/js/368.f5f2a795.chunk.js.map",
-    "448.7e31816e.js.map": "/static/js/448.7e31816e.js.map"
+    "219.ded4b4d8.js.map": "/static/js/219.ded4b4d8.js.map"
   },
   "entrypoints": [
-    "static/js/448.7e31816e.js",
-    "static/js/main.f57c0094.js"
+    "static/js/219.ded4b4d8.js",
+    "static/js/main.f0ea98f9.js"
   ]
 }

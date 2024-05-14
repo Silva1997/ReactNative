@@ -57,7 +57,7 @@ const App = () => {
                 <VStack space={4} alignItems="center">
                     <View safeArea>
                         <Text style={{ fontWeight: '500', textAlign: 'center', color: "#fff" }}>Registar dados</Text>
-                    {/* <Camera/> */}
+                    <Camera/>
                     </View>
                     <FormControl isRequired isInvalid={false} w="75%" maxW="300px">
                         <FormControl.Label color={'#fff'}>Nome</FormControl.Label>
